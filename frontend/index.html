@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card auth-card" id="auth-card">
+      <h1>Student Task Manager</h1>
+      <div class="tabs">
+        <button class="tab-button active" id="login-tab">Login</button>
+        <button class="tab-button" id="register-tab">Register</button>
+      </div>
+
+      <form id="auth-form">
+        <label>
+          Username
+          <input type="text" id="username" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="password" autocomplete="current-password" required />
+        </label>
+
+        <button type="submit" class="primary-button" id="auth-submit">Submit</button>
+        <p class="message" id="auth-message"></p>
+      </form>
+    </section>
+
+    <section class="card tasks-card hidden" id="tasks-card">
+      <div class="tasks-header">
+        <div>
+          <h2>My Tasks</h2>
+          <p id="welcome-text"></p>
+        </div>
+        <button class="secondary-button" id="logout-button">Logout</button>
+      </div>
+
+      <form id="task-form" class="task-form">
+        <label>
+          Task title
+          <input type="text" id="task-title" required />
+        </label>
+        <label>
+          Description
+          <textarea id="task-description" rows="2"></textarea>
+        </label>
+        <button type="submit" class="primary-button">Add Task</button>
+      </form>
+
+      <div id="task-list" class="task-list"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
